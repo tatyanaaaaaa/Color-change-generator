@@ -7,25 +7,31 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
-    @IBOutlet weak var backgroundView: UIView!
+    // MARK: - Private property
     
-    @IBOutlet weak var redChangeValueLabel: UILabel!
-    @IBOutlet weak var greenChangeValueLabel: UILabel!
-    @IBOutlet weak var blueChangeValueLabel: UILabel!
+    @IBOutlet weak private var backgroundView: UIView!
     
-    @IBOutlet weak var redSlider: UISlider!
-    @IBOutlet weak var greenSlider: UISlider!
-    @IBOutlet weak var blueSlider: UISlider!
+    @IBOutlet weak private var redChangeValueLabel: UILabel!
+    @IBOutlet weak private var greenChangeValueLabel: UILabel!
+    @IBOutlet weak private var blueChangeValueLabel: UILabel!
+    
+    @IBOutlet weak private var redSlider: UISlider!
+    @IBOutlet weak private var greenSlider: UISlider!
+    @IBOutlet weak private var blueSlider: UISlider!
+    
+    // MARK: - Internal func
     
     override func viewDidLoad() {
         super.viewDidLoad()
         backgroundView.layer.cornerRadius = 21
         changeBackgrounColorView()
     }
+    
+    // MARK: - Private func
 
-    @IBAction func changeColorSlider() {
+    @IBAction private func changeColorSlider() {
         setDefaultSettingsChangeColor()
     }
     
@@ -43,9 +49,5 @@ class ViewController: UIViewController {
                                                blue: CGFloat(blueSlider.value),
                                                alpha: 1)
     }
-    
-    
-    
-    
 }
 

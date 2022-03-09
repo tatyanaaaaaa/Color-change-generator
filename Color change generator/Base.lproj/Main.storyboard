@@ -81,20 +81,29 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="T6J-nE-2OU" userLabel="Slider Stack View">
                                         <rect key="frame" x="111" y="0.0" width="232" height="106"/>
                                         <subviews>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IDk-yG-bT8" userLabel="red Horizontal Slider">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.29999999999999999" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IDk-yG-bT8" userLabel="red Horizontal Slider">
                                                 <rect key="frame" x="-2" y="0.0" width="236" height="31"/>
                                                 <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
                                                 <color key="thumbTintColor" systemColor="systemRedColor"/>
+                                                <connections>
+                                                    <action selector="changeColorSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="Mg0-3H-8x5"/>
+                                                </connections>
                                             </slider>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="D38-GD-b6R" userLabel="green Horizontal Slider">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.40000000000000002" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="D38-GD-b6R" userLabel="green Horizontal Slider">
                                                 <rect key="frame" x="-2" y="38" width="236" height="31"/>
                                                 <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
                                                 <color key="thumbTintColor" systemColor="systemGreenColor"/>
+                                                <connections>
+                                                    <action selector="changeColorSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="4cv-bD-MFT"/>
+                                                </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wpc-HB-nEg" userLabel="blue Horizontal Slider">
                                                 <rect key="frame" x="-2" y="76" width="236" height="31"/>
                                                 <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
                                                 <color key="thumbTintColor" systemColor="systemBlueColor"/>
+                                                <connections>
+                                                    <action selector="changeColorSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="PQx-zs-tzP"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <constraints>
@@ -115,6 +124,15 @@
                             <constraint firstItem="Jng-GG-Cwh" firstAttribute="top" secondItem="7TY-BW-9gl" secondAttribute="bottom" constant="32" id="xd1-0a-Ovf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="7TY-BW-9gl" id="fsO-kc-SOa"/>
+                        <outlet property="blueChangeValueLabel" destination="67r-Jn-TTZ" id="46n-G4-xGS"/>
+                        <outlet property="blueSlider" destination="Wpc-HB-nEg" id="oGu-Yt-BQy"/>
+                        <outlet property="greenChangeValueLabel" destination="32d-bQ-wzH" id="yNX-6t-ieo"/>
+                        <outlet property="greenSlider" destination="D38-GD-b6R" id="ysg-yk-6VU"/>
+                        <outlet property="redChangeValueLabel" destination="f9T-6O-DNx" id="PYh-el-QtE"/>
+                        <outlet property="redSlider" destination="IDk-yG-bT8" id="94H-AG-72H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
